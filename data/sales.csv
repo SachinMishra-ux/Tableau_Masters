@@ -1,0 +1,51 @@
+OrderID,OrderDate,Region,ProductCategory,Product,Sales,Quantity,Profit,Latitude,Longitude
+1001,2025-01-05,West,Technology,Laptop,1200,2,200,37.7749,-122.4194
+1002,2025-01-07,East,Office Supplies,Paper Pack,30,10,5,40.7128,-74.0060
+1003,2025-01-10,South,Furniture,Office Chair,200,1,50,34.0522,-118.2437
+1004,2025-01-12,North,Technology,Mouse,25,5,8,41.8781,-87.6298
+1005,2025-01-15,West,Furniture,Desk,350,1,80,37.7749,-122.4194
+1006,2025-01-20,East,Technology,Monitor,300,2,60,40.7128,-74.0060
+1007,2025-01-22,South,Office Supplies,Stapler,15,4,3,34.0522,-118.2437
+1008,2025-01-25,North,Furniture,Bookshelf,150,1,30,41.8781,-87.6298
+1009,2025-01-28,West,Office Supplies,Pen Set,10,20,4,37.7749,-122.4194
+1010,2025-02-01,East,Technology,Keyboard,45,3,12,40.7128,-74.0060
+1011,2025-02-03,South,Furniture,Office Desk,400,1,100,34.0522,-118.2437
+1012,2025-02-06,North,Office Supplies,Notebook,5,50,10,41.8781,-87.6298
+1013,2025-02-08,West,Technology,Webcam,85,2,20,37.7749,-122.4194
+1014,2025-02-12,East,Furniture,File Cabinet,220,1,55,40.7128,-74.0060
+1015,2025-02-14,South,Technology,Headset,60,3,15,34.0522,-118.2437
+1016,2025-02-18,North,Office Supplies,Envelope Pack,8,25,2,41.8781,-87.6298
+1017,2025-02-20,West,Furniture,Office Couch,500,1,120,37.7749,-122.4194
+1018,2025-02-23,East,Technology,Printer,250,1,40,40.7128,-74.0060
+1019,2025-02-25,South,Office Supplies,Marker Set,12,15,3,34.0522,-118.2437
+1020,2025-02-28,North,Technology,Projector,600,1,90,41.8781,-87.6298
+1021,2025-03-02,West,Office Supplies,Folder Set,20,10,5,37.7749,-122.4194
+1022,2025-03-05,East,Furniture,Visitor Chair,180,2,45,40.7128,-74.0060
+1023,2025-03-07,South,Technology,Tablet,320,1,70,34.0522,-118.2437
+1024,2025-03-10,North,Office Supplies,Ink Cartridge,35,2,9,41.8781,-87.6298
+1025,2025-03-12,West,Furniture,Study Table,260,1,65,37.7749,-122.4194
+1026,2025-03-15,East,Technology,External HDD,95,3,18,40.7128,-74.0060
+1027,2025-03-18,South,Office Supplies,Paper Pack Large,45,8,12,34.0522,-118.2437
+1028,2025-03-20,North,Furniture,Office Lamp,40,2,10,41.8781,-87.6298
+1029,2025-03-23,West,Technology,Smartphone,700,1,150,37.7749,-122.4194
+1030,2025-03-25,East,Office Supplies,Stapler Large,18,5,6,40.7128,-74.0060
+1031,2025-03-28,South,Furniture,Drawer Unit,210,1,50,34.0522,-118.2437
+1032,2025-03-30,North,Technology,Router,120,2,22,41.8781,-87.6298
+1033,2025-04-02,West,Office Supplies,Notebook Large,10,40,9,37.7749,-122.4194
+1034,2025-04-05,East,Furniture,Conference Table,800,1,200,40.7128,-74.0060
+1035,2025-04-08,South,Technology,Smartwatch,250,2,50,34.0522,-118.2437
+1036,2025-04-10,North,Office Supplies,Pen Bulk,25,30,8,41.8781,-87.6298
+1037,2025-04-12,West,Furniture,Cabinet,300,1,75,37.7749,-122.4194
+1038,2025-04-15,East,Technology,Monitor 4K,400,1,85,40.7128,-74.0060
+1039,2025-04-18,South,Office Supplies,Sticky Notes Pack,7,60,5,34.0522,-118.2437
+1040,2025-04-20,North,Furniture,Ergonomic Chair,220,1,55,41.8781,-87.6298
+1041,2025-04-22,West,Technology,Laptop Gaming,1500,1,300,37.7749,-122.4194
+1042,2025-04-25,East,Office Supplies,Desk Organizer,15,12,4,40.7128,-74.0060
+1043,2025-04-28,South,Furniture,Office Shelf,260,1,65,34.0522,-118.2437
+1044,2025-05-01,North,Technology,Smartphone Pro,900,1,180,41.8781,-87.6298
+1045,2025-05-03,West,Office Supplies,Ink Cartridge Large,60,2,14,37.7749,-122.4194
+1046,2025-05-05,East,Furniture,Office Sofa,600,1,150,40.7128,-74.0060
+1047,2025-05-07,South,Technology,Headset Pro,120,2,25,34.0522,-118.2437
+1048,2025-05-10,North,Office Supplies,Folder Bulk,30,15,10,41.8781,-87.6298
+1049,2025-05-12,West,Furniture,Study Chair,180,1,45,37.7749,-122.4194
+1050,2025-05-15,East,Technology,Webcam HD,110,2,22,40.7128,-74.0060

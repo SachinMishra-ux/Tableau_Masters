@@ -1,0 +1,21 @@
+﻿Table Names,Product Name,City_of_Shipment,Is Duplicate Row?,Customer_ID,Full_Name,Proper Full Name,Email,Phone,Signup_Date,State,State Code,order_id,product_name,order_date,order_amount,Order Amount,payment_status,shipping_city
+"localhost/tableau/orders_raw,customers_raw.csv",iphone 14,Bangalore,Unique,C001,john doe,John Doe,john.doe@example.com,9876543210,05/01/2024,ka,KA,O1001,iphone 14 ,2024-02-01,$1200,1200,Success,Bangalore
+"localhost/tableau/orders_raw,customers_raw.csv",samsung s22,Bangalore,Unique,C002,ALICE JOHNSON,Alice Johnson,alice@sample.com,,12/01/2024,KA,KA,O1002,Samsung S22,01/02/24,950 USD,950,Failed,Bengaluru
+"localhost/tableau/orders_raw,customers_raw.csv",macbook  pro,Bangalore,Unique,C003,Mark Davis,Mark Davis,markd@gmail.com,987 111 2222,15/01/2024,Na,NA,O1003,Macbook  pro,2024/02/03,1500,1500,Success,Bangalore 
+"localhost/tableau/orders_raw,customers_raw.csv",iphone14,Bangalore,Unique,C004,John Doe,John Doe,john.doe@example.com,9876543210,05/01/2024,KA,KA,O1004,IPHONE14,2024.02.05,Na,1200,Success,Bengaluru
+"localhost/tableau/orders_raw,customers_raw.csv",iphone-14,Bangalore,Unique,C005,Priya Shah,Priya Shah,priya_s@gmail.com,,10/02/2024,GJ,GJ,O1005,Iphone-14,2024-02-10,1200$,1200,Pending,Banglore
+"localhost/tableau/orders_raw,customers_raw.csv",samsung   s22,Bangalore,Unique,C006,RAHUL menon,Rahul Menon,rahulm@yahoo.com,9845098450,02/12/2024,K A,KA,O1006,Samsung   s22,2024-02-11,950,950,Success,Bangalore
+"localhost/tableau/orders_raw,customers_raw.csv",Unknown Product,Unknown,,,,,,,,,,O1007,-,2024-02-13,700,700,Failed,Unknown
+"localhost/tableau/orders_raw,customers_raw.csv",airpods   pro,Hyderabad,Unique,C008,David Warner,David Warner,davidw@gmail.com,99-88-77-66,20/02/2024,TS,TS,O1008,Airpods   Pro,14-02-2024,250 USD,250,Success,Hyderabad
+"localhost/tableau/orders_raw,customers_raw.csv",samsung s22,Unknown,Unique,C009,neha kapoor,Neha Kapoor,neha@kpr.com,,28/02/2024,dl,DL,O1009,Samsung S22,2024/02/15,950,950,Success,NA
+"localhost/tableau/orders_raw,customers_raw.csv",iphone 14,Bangalore,Unique,C001,john doe,John Doe,john.doe@example.com,9876543210,05/01/2024,ka,KA,O1010,iphone 14 ,2024-02-01,$1200,1200,Success,Bangalore
+"localhost/tableau/orders_raw,customers_raw.csv",macbook pro,Delhi,Unique,C010,,,missing@mail.com,9999999999,01/03/2024,DL,DL,O1011,MacBook PRO,2024-02-20,1500 USD,1500,Pending,Delhi
+"localhost/tableau/orders_raw,customers_raw.csv",iphone 14,Bangalore,Unique,C011,sachin kumar,Sachin Kumar,sachin@abc.com,9870012300,03/03/2024,Kt,KT,O1012,Iphone 14,2024/02/20,$1200,1200,Success,Bengaluru
+"localhost/tableau/orders_raw,customers_raw.csv",samsung s22,Hyderabad,Unique,C012,RITA  sen,Rita  Sen,rita@xyz.com,98 76 54 32 10,04/03/2024,MH,MH,O1013,Samsung S22 ,20-02-2024,950,950,Success,Hyderabad
+"localhost/tableau/orders_raw,customers_raw.csv",airpods pro,Delhi,Unique,C013,Aman Gupta,Aman Gupta,aman@test.com,,05/03/2024,mh,MH,O1014,airpods pro,2024-02-25,250,250,Failed,Delhi
+"localhost/tableau/orders_raw,customers_raw.csv",airpods pro,Delhi,Unique,C014,prerna   jain,Prerna   Jain,prerna@mail.com,88888 77777,06/03/2024,DL,DL,O1015,AirPods Pro,2024-02-28,250$,250,Success,Delhi
+"localhost/tableau/orders_raw,customers_raw.csv",iphone  14,Bangalore,Unique,C015,VIJAY K,Vijay K,vijay@aaa.com,9090909090,07/03/2024,Gj,GJ,O1016,IPHONE  14,2024/02/28,$1200,1200,Success,Banglore
+"localhost/tableau/orders_raw,customers_raw.csv",samsung s22,Mumbai,Unique,C016,,,unknown@abc.com,,08/03/2024,tn,TN,O1017,Samsung S22,2024-03-01,950 USD,950,Success,Mumbai
+"localhost/tableau/orders_raw,customers_raw.csv",macbook-pro,Mumbai,Unique,C017,deepa nair,Deepa Nair,deepa@gmail.com,98-45-10-32,09/03/2024,KE,KE,O1018,Macbook-Pro,01-03-2024,1500,1500,Success,Mumbai
+"localhost/tableau/orders_raw,customers_raw.csv",samsung s22,Unknown,Unique,C018,rohan,Rohan,rohan@123.com,,10/03/2024,Ke,KE,O1019,Samsung S22,2024-03-03,950 USD,950,Pending,NA
+"localhost/tableau/orders_raw,customers_raw.csv",iphone14,Hyderabad,Unique,C019,Emily Davis,Emily Davis,emily@example.com,,10/03/2024,TS,TS,O1020,IPHONE14,2024/03/05,Na,1200,Success,Hyderabad

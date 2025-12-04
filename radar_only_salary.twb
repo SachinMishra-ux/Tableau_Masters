@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <Extensions />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <_.fcp.VizExtensions.true...VizExtensions />
+    <_.fcp.VizExtensionsDupEncodingUUID.true...VizExtensionsDupEncodingUUID />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='salaries' inline='true' name='federated.1fwn3qo1aduel90zwdm1v0v4iy1n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='salaries' name='textscan.0qoh6wf1muzhmx16ikk3o1b7veqz'>
+            <connection class='textscan' directory='/Users/sachinmishra/Desktop/Euron_Tableau_Masters/data' filename='salaries.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0qoh6wf1muzhmx16ikk3o1b7veqz' name='salaries.csv' table='[salaries#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Role' ordinal='0' />
+            <column datatype='string' name='Skill' ordinal='1' />
+            <column datatype='integer' name='Skill_Score' ordinal='2' />
+            <column datatype='integer' name='Typical_Annual_Salary' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Role</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Role]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>Role</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Skill</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Skill]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>Skill</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Skill_Score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Skill_Score]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>Skill_Score</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Typical_Annual_Salary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Typical_Annual_Salary]</local-name>
+            <parent-name>[salaries.csv]</parent-name>
+            <remote-alias>Typical_Annual_Salary</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Skill Score' datatype='integer' name='[Skill_Score]' role='measure' type='quantitative' />
+      <column caption='Typical Annual Salary' datatype='integer' name='[Typical_Annual_Salary]' role='measure' type='quantitative' />
+      <column caption='salaries.csv' datatype='table' name='[__tableau_internal_object_id__].[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/ry/0dp2gqbj4nv8q6qbdj7z67700000gn/T/tableau-temp/#TableauTemp_1l1ttfm1nwd3xk10gozfv09jylna.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/28/2025 11:08:40 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Role</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Role]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Role</remote-alias>
+              <ordinal>0</ordinal>
+              <family>salaries.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Skill</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Skill]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Skill</remote-alias>
+              <ordinal>1</ordinal>
+              <family>salaries.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Skill_Score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Skill_Score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Skill_Score</remote-alias>
+              <ordinal>2</ordinal>
+              <family>salaries.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Typical_Annual_Salary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Typical_Annual_Salary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Typical_Annual_Salary</remote-alias>
+              <ordinal>3</ordinal>
+              <family>salaries.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='salaries.csv' id='salaries.csv_618C7D06A7194FD49D1EDD1990A5C9B5'>
+            <properties context=''>
+              <relation connection='textscan.0qoh6wf1muzhmx16ikk3o1b7veqz' name='salaries.csv' table='[salaries#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Role' ordinal='0' />
+                  <column datatype='string' name='Skill' ordinal='1' />
+                  <column datatype='integer' name='Skill_Score' ordinal='2' />
+                  <column datatype='integer' name='Typical_Annual_Salary' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Radar_3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salaries' name='federated.1fwn3qo1aduel90zwdm1v0v4iy1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1fwn3qo1aduel90zwdm1v0v4iy1n'>
+            <column datatype='string' name='[Role]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Skill]' role='dimension' type='nominal' />
+            <column caption='Skill Score' datatype='integer' name='[Skill_Score]' role='measure' type='quantitative' />
+            <column-instance column='[Role]' derivation='None' name='[none:Role:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Skill]' derivation='None' name='[none:Skill:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Skill_Score]' derivation='Sum' name='[sum:Skill_Score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.appsfortableau.extensions.show-me-more-share' extension-url='https://extensions-appsfortableau.infotopics.com/smm-radar/' extension-version='0.1.0' instance-id='AEC618D867504A16B5743666DA675893'>
+              <instance-settings />
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C297DB9D-36E4-4048-B454-6AC3B527F2D1}' column='[federated.1fwn3qo1aduel90zwdm1v0v4iy1n].[none:Skill:nk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{C297DB9D-36E4-4048-B454-6AC3B527F2D1}' column='[federated.1fwn3qo1aduel90zwdm1v0v4iy1n].[none:Skill:nk]' custom-type-name='smm-radar+dimensions' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{B18A5545-82D7-42BE-A05A-190130AD718F}' column='[federated.1fwn3qo1aduel90zwdm1v0v4iy1n].[none:Role:nk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{B18A5545-82D7-42BE-A05A-190130AD718F}' column='[federated.1fwn3qo1aduel90zwdm1v0v4iy1n].[none:Role:nk]' custom-type-name='smm-radar+xAxis' />
+              <_.fcp.VizExtensions.false...lod _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{67F2312E-A3F7-486F-9578-99C75EE1942C}' column='[federated.1fwn3qo1aduel90zwdm1v0v4iy1n].[sum:Skill_Score:qk]' />
+              <_.fcp.VizExtensions.true...custom _.fcp.VizExtensionsDupEncodingUUID.true...encoding-id='{67F2312E-A3F7-486F-9578-99C75EE1942C}' column='[federated.1fwn3qo1aduel90zwdm1v0v4iy1n].[sum:Skill_Score:qk]' custom-type-name='smm-radar+measures' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{902A1378-5208-4CBC-AE45-DA709AAD0454}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Radar_3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9A7FBD49-107B-40D5-AB6D-1B22A8905E8C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Radar_3' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAN6klEQVR4nO3afajW9f3H8de5TC3Lmx3z0NJZmCtr6hEkdYtKsTw6beFKi4gYGUREDWJa
+      rEbSDQ0GRVMcq1ZtyVmGJY6x2Z15U1pmjnkgtS3keFrCItzq6LTknP0RO+CvNfbHbxW8H4//
+      vp/r5vP5fq8/ntfne11Nvb29vQGgnMYXvQAAvhgCAFCUAAAUJQAARQkAQFECAFCUAAAUJQAA
+      RQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCU
+      AAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkA
+      QFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAU
+      JQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFEC
+      AFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAA
+      RQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCU
+      AAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkA
+      QFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAU
+      JQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFEC
+      AFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAA
+      RQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCU
+      AAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkA
+      QFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFDUcV/0AoB6Dh06lO7u7mPGhg4d
+      moEDBx4z1tvbm+7u7gwePPiY8Q8//PBTY5+3L8Makk+uZf/+/dO/f/8kn33N/q/e3l47AODz
+      t3z58syZMyeTJ0/OlClTMmfOnPzqV7/61PO6u7szd+7cT41PmjQp+/fv/zyW+m91d3fn/PPP
+      T5JcfPHF6ezs/NzmvuCCC445fvDBB3PXXXf1Ha9ZsyY333xzfv7zn2flypWf+T4HDx60AwA+
+      f0uWLMmSJUuybNmynHjiibn22muTJB999FG2bNmSrq6uzJ07t+9b7datW/POO+9kzpw5Oemk
+      k/re5+OPP8769evTaDQyffr09O/fP++//36ef/75DBs2LBdffHH27t2b4447Lqeffnr279+f
+      7u7ufP3rX+97j87OzmzevDnTpk3L2LFjc+TIkbz88svZv39/LrnkkpxwwgnZsWNHBg0alD/+
+      8Y9pa2tLS0tLWlpa8uabb6azszO/+c1vsmDBgpxyyil963r++eczcODAzJgxIx0dHRk+fHhG
+      jRqV7du35/TTT8+uXbsydOjQdHR0ZNasWRkxYkR6enry+uuvp6urK21tbRk8eHBeffXVjBkz
+      Jps2bcrw4cPT1dWV3/72t5k3b16SZMGCBZk/f37uvvvuJMlTTz2V733veznttNNy/PHH5623
+      3kpHR0eSpNFo5Dvf+U769ev3yfH/+HMG+K9dddVVeeyxx9LR0ZGFCxcmSd5444389Kc/zaZN
+      mzJ79uz09vYm+eQWxo033pj29vb84he/yO233569e/dm1qxZ2bNnT+677760t7fnkUceSXt7
+      e5LklVdeyapVq/rm27lzZ9ra2rJv377Mnj07u3fvzmWXXZb29vbs2LEjV111VQ4cOJBZs2bl
+      tttuy/bt2/Pd7343SXLXXXelq6sr//jHP/L222/n/fff71vXtddemzVr1uShhx7Kvffem3ff
+      fTdXXHFF9uzZk+uuuy5Hjx7N1VdfnR/84AfZtWtXLrzwwhw4cCD3339/br311mzbti0zZ87M
+      hx9+mB/+8Idpa2vL7t2709nZmSNHjuStt97qO4cxY8akubk5O3fuzIEDB9LR0ZGZM2fmxRdf
+      zPr16/Pee+/lnXfeyfr163PTTTfl6NGjfa+1AwC+NH72s59l69at2bBhQ/bt25ckGT9+fNrb
+      29Pb25spU6b0fZs9cuRI1qxZkx//+Mc5evRo7rzzztx9991ZtWpVnnvuufT09GTLli0ZOnTo
+      Z873xBNPZOnSpbnyyisze/bsDB06NI8++mheeeWVbNy4sW8N3/jGN/K73/0u7733XiZMmJAk
+      mTZtWpLk1FNPzQ033JCzzjorySc7ivXr1+eee+7J4cOHs3z58txxxx1Zt25dLrzwwjz++ONp
+      aWlJU1NTnnzyyTQ3N+fAgQPZuHFjHnvssWzevDnNzc255ppr8uyzz/Zdl3/N9+CDD+aWW27p
+      O4dGo5GFCxemvb09kydPzkUXXdS3c0qS8847L62trZk+fXqeeOKJY35nsQMAvjRuvvnmbNiw
+      Iddcc00GDRqUJBk4cGCamprSaDQyZMiQ/P3vf0/yyW2WIUOGZMiQIRk+fHiWL1+ePXv2ZP78
+      +Wk0Gpk7d+4xu4V/58iRI32BOOusszJixIhcf/31efXVV7No0aK+WyVDhgxJkjQ1NaWpqek/
+      nsMHH3yQAQMGZPDgwRkxYkR+8pOfpKenJy0tLTl8+HBOPvnkT72mubk5H3/8cRqNRt+Pt1/5
+      ylf6dhVnnnnmf5zz8ssvz9q1a/P4449nwYIFn3r8pptuymWXXZYZM2YcMy4AwJfCwYMH8/rr
+      r2fhwoVZt25dDh06lN7e3uzYsSOPPvpofv/73+cvf/lLpk6dmiQZNGhQhg0blqNHj2bUqFF5
+      5plnsmnTprS2tmb8+PF56aWX0tPTk5EjR+bPf/5z/vCHP2TZsmXHzDl16tQ88MAD6ejoyOWX
+      X55169Zl586dmT9/ftauXXvM7ZLPMmDAgGzbti1/+9vfkiRnn312hg8fnkajkREjRmTlypXp
+      6OjI008/nSeffDLf//73c/DgwfT29mbFihV5+eWX89RTT2XixIkZN25c7rnnnmzevDkvvPBC
+      2traPjVfd3d3Ojo6jolaS0tLRo8enT/96U991+dffvnLX+a1117Lueeemw0bNuTgwYN9j/Vb
+      unTp0v/6EwL4f9TU1JRRo0bllFNOyYABAzJo0KCsXr0648ePz4QJEzJp0qS0tLTkr3/9a7Zv
+      35577703X/va19KvX79MmzYt3/72t7Nq1aps3bo1ixcvzre+9a1s27Ytu3fvzqWXXppzzjkn
+      8+bNy4YNG7Jly5YsXLgwEydOzGmnnZYkmTBhQj766KM8/PDDufTSS3PllVdmwIABWbt2bVpb
+      WzNu3LhMnjw5J554YiZOnJgkOf744/PNb36z7xzGjh2b1atX54wzzsjIkSPTr1+/zJgxIytX
+      rswbb7yRxYsX5+23386iRYty3nnnZeDAgTnhhBPy61//OlOnTs2LL76YW265JdOmTcvMmTOz
+      bdu2vPDCC/nRj36USZMmpdFopLW19ZjbOmvWrMm8efPSaDT6ruNXv/rVTJkyJa2trX1jI0eO
+      zLvvvpvRo0enq6srnZ2dOfPMMzNs2LBPntP7WXsjAP4nenp6MmbMmOzYsSPNzc1f2DrcAgL4
+      nDU1NWXFihXH/KX1C1mHHQBATXYAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJ
+      AEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAA
+      FCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBR
+      AgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUA
+      AEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQ
+      lAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJ
+      AEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAA
+      FCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBR
+      AgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUA
+      AEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQ
+      lAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJ
+      AEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAA
+      FCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBR
+      /wRYiegupDiPNgAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+  <_.fcp.VizExtensions.true...referenced-extensions>
+    <_.fcp.VizExtensions.true...referenced-extension>
+      <manifest manifest-version='0.1'>
+        <worksheet-extension extension-version='0.1.0' id='com.appsfortableau.extensions.show-me-more-share'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>Radar Chart</description>
+          <author email='support@appsfortableau.com' name='Infotopics | AppsforTableau' organization='Infotopics | AppsforTableau' website='https://appsfortableau.infotopics.com' />
+          <min-api-version>1.11</min-api-version>
+          <source-location>
+            <url>https://extensions-appsfortableau.infotopics.com/smm-radar/</url>
+          </source-location>
+          <icon>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</icon>
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+          <encoding id='smm-radar+dimensions'>
+            <display-name>Dimensions</display-name>
+            <data-spec>
+              <data-type>string</data-type>
+            </data-spec>
+            <encoding-icon token='level' />
+            <tooltip>Add dimensions to required to create radar chart</tooltip>
+          </encoding>
+          <encoding id='smm-radar+xAxis'>
+            <display-name>Spokes</display-name>
+            <data-spec>
+              <data-type>string</data-type>
+            </data-spec>
+            <fields max-count='1' />
+            <encoding-icon token='delta-up' />
+            <tooltip>X-Axis value</tooltip>
+          </encoding>
+          <encoding id='smm-radar+measures'>
+            <display-name>Measure</display-name>
+            <data-spec>
+              <data-type>numeric</data-type>
+            </data-spec>
+            <fields max-count='1' />
+            <encoding-icon token='metric' />
+            <tooltip>Value</tooltip>
+          </encoding>
+        </worksheet-extension>
+        <resources>
+          <resource id='name'>
+            <text locale='en_US'>Radar Chart</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='Radar_3' />
+      </referenced-views>
+    </_.fcp.VizExtensions.true...referenced-extension>
+  </_.fcp.VizExtensions.true...referenced-extensions>
+</workbook>

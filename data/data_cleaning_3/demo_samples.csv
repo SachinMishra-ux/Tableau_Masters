@@ -1,0 +1,13 @@
+OrderID,OrderDate,Region,Category,SubCategory,Sales,Quantity,Profit,CustomerSegment
+1001,2024-01-05,East,Technology,Laptops,1200,2,150,Corporate
+1002,2024-01-07,West,Furniture,Chairs,450,4,50,Home Office
+1003,2024-01-10,South,Office Supplies,Paper,80,5,5,Consumer
+1004,2024-02-12,North,Technology,Printers,600,1,30,Corporate
+1005,2024-02-20,East,Furniture,Tables,900,1,120,Consumer
+1006,2024-03-05,West,Office Supplies,Binders,150,3,10,Home Office
+1007,2024-04-15,South,Technology,Phones,700,2,90,Corporate
+1008,2024-04-20,North,Furniture,Bookcases,350,1,-20,Consumer
+1009,2024-05-01,East,Office Supplies,Envelopes,40,10,5,Home Office
+1010,2024-05-11,West,Technology,Accessories,200,4,25,Corporate
+1011,2024-05-22,South,Furniture,Sofas,1500,1,200,Consumer
+1012,2024-06-02,North,Technology,Monitors,300,2,40,Corporate

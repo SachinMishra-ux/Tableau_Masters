@@ -1,0 +1,25 @@
+Role,Skill,Skill_Score,Typical_Annual_Salary
+Data Scientist,Statistics & Maths,9,1500000
+Data Scientist,Machine Learning,9,1500000
+Data Scientist,Programming (Python/R),8,1500000
+Data Scientist,Data Visualization,7,1500000
+Data Scientist,SQL / Databases,7,1500000
+Data Scientist,Big Data / Distributed Computing,6,1500000
+Data Scientist,Domain Knowledge,7,1500000
+Data Scientist,Communication & Storytelling,6,1500000
+Data Engineer,Programming (Python/Java/Scala),8,1300000
+Data Engineer,SQL / Databases,9,1300000
+Data Engineer,Data Modeling / ETL / Pipelines,9,1300000
+Data Engineer,Big Data / Distributed Computing,8,1300000
+Data Engineer,Cloud / Infrastructure,8,1300000
+Data Engineer,Data Warehousing,7,1300000
+Data Engineer,Data Quality & Reliability,8,1300000
+Data Engineer,Communication & Collaboration,6,1300000
+Data Analyst,Statistics & Maths,7,800000
+Data Analyst,Data Cleaning / Pre-processing,8,800000
+Data Analyst,SQL / Databases,8,800000
+Data Analyst,Data Visualization & Reporting,9,800000
+Data Analyst,Excel / BI Tools,9,800000
+Data Analyst,Domain Knowledge,7,800000
+Data Analyst,Communication & Presentation,8,800000
+Data Analyst,Basic Programming (Python/R),6,800000

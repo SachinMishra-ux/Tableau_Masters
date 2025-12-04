@@ -1,0 +1,21 @@
+Customer_ID,Full_Name,Email,Phone,Signup_Date,State
+C001, john doe ,john.doe@example.com,9876543210,2024-01-05,ka
+C002,ALICE JOHNSON,alice@sample.com,,01/12/2024,KA
+C003,Mark Davis,markd@gmail.com,987 111 2222,2024/01/15,Na
+C004,John Doe,john.doe@example.com,9876543210,2024-01-05,KA
+C005, Priya Shah ,priya_s@gmail.com,N/A,2024-02-10, GJ
+C006,RAHUL menon,rahulm@yahoo.com,9845098450,12-02-2024,K A
+C007, - ,unknown@none.com,,2024-02-14,NULL
+C008,David Warner,davidw@gmail.com,99-88-77-66,2024.02.20,TS
+C009,neha kapoor,neha@kpr.com,,2024-02-28,dl
+C010,,missing@mail.com,9999999999,2024-03-01,DL
+C011, sachin kumar,sachin@abc.com,9870012300,2024-03-03,Kt
+C012,RITA  sen,rita@xyz.com,98 76 54 32 10,2024-03-04,  MH
+C013,Aman Gupta,aman@test.com,,03-05-2024,mh
+C014,prerna   jain,prerna@mail.com,88888 77777,2024-03-06,DL
+C015,VIJAY K, vijay@aaa.com, 9090909090,2024/03/07,Gj
+C016,,unknown@abc.com,,2024-03-08,tn
+C017,  deepa nair  ,deepa@gmail.com,98-45-10-32,2024-03-09,KE
+C018,rohan,rohan@123.com,,2024-03-10,Ke
+C019,Emily Davis,emily@example.com,N/A,2024-03-10,TS
+C020,Kiran Patil,patilkiran@xyz.com,8888888888,2024/03/11,MH

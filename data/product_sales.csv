@@ -1,0 +1,49 @@
+TransactionID,TransactionDate,Region,ProductCategory,Product,Sales,Quantity,Profit,CustomerAge,CustomerSegment
+2001,2025-01-02,North,Technology,Laptop,1300,1,250,34,Consumer
+2002,2025-01-04,East,Office Supplies,Paper Pack,25,5,4,45,Corporate
+2003,2025-01-06,South,Furniture,Office Chair,220,2,40,29,Home Office
+2004,2025-01-08,West,Technology,Monitor,310,1,60,52,Consumer
+2005,2025-01-10,North,Office Supplies,Pen Set,15,10,5,37,Corporate
+2006,2025-01-12,East,Furniture,Desk,370,1,70,48,Home Office
+2007,2025-01-14,South,Technology,Keyboard,55,2,15,31,Consumer
+2008,2025-01-16,West,Office Supplies,Stapler,18,3,6,27,Corporate
+2009,2025-01-18,North,Furniture,Bookshelf,160,1,35,44,Home Office
+2010,2025-02-01,East,Technology,Webcam,95,2,22,39,Consumer
+2011,2025-02-05,South,Office Supplies,Notebook,7,20,3,41,Corporate
+2012,2025-02-09,West,Furniture,Office Desk,420,1,110,36,Home Office
+2013,2025-02-13,North,Technology,Printer,260,1,45,50,Consumer
+2014,2025-02-17,East,Office Supplies,Envelope Pack,10,15,2,33,Corporate
+2015,2025-02-21,South,Furniture,Conference Table,780,1,180,55,Home Office
+2016,2025-02-25,West,Technology,Smartphone,720,1,160,28,Consumer
+2017,2025-03-01,North,Office Supplies,Desk Organizer,20,8,6,46,Corporate
+2018,2025-03-05,East,Furniture,Office Shelf,240,1,60,59,Home Office
+2019,2025-03-09,South,Technology,Tablet,330,1,75,34,Consumer
+2020,2025-03-13,West,Office Supplies,Ink Cartridge,40,2,10,38,Corporate
+2021,2025-03-17,North,Furniture,Ergonomic Chair,230,1,60,42,Home Office
+2022,2025-03-21,East,Technology,Smartwatch,260,2,55,47,Consumer
+2023,2025-03-25,South,Office Supplies,Folder Pack,22,12,7,30,Corporate
+2024,2025-03-29,West,Furniture,Cabinet,310,1,80,53,Home Office
+2025,2025-04-02,North,Technology,External HDD,100,3,20,35,Consumer
+2026,2025-04-06,East,Office Supplies,Marker Set,14,6,4,49,Corporate
+2027,2025-04-10,South,Furniture,Office Lamp,45,2,12,54,Home Office
+2028,2025-04-14,West,Technology,Router,130,2,28,40,Consumer
+2029,2025-04-18,North,Office Supplies,Sticky Notes,9,25,3,43,Corporate
+2030,2025-04-22,East,Furniture,Visitor Chair,190,1,50,38,Home Office
+2031,2025-04-26,South,Technology,Monitor 4K,420,1,90,29,Consumer
+2032,2025-04-30,West,Office Supplies,Paper Pack Large,48,7,13,51,Corporate
+2033,2025-05-04,North,Furniture,Drawer Unit,220,1,55,44,Home Office
+2034,2025-05-08,East,Technology,Smartphone Pro,940,1,190,32,Consumer
+2035,2025-05-12,South,Office Supplies,Pen Bulk,28,20,9,48,Corporate
+2036,2025-05-16,West,Furniture,Study Table,270,1,70,37,Home Office
+2037,2025-05-20,North,Technology,Laptop Gaming,1550,1,320,39,Consumer
+2038,2025-05-24,East,Office Supplies,Ink Cartridge Large,65,3,17,45,Corporate
+2039,2025-05-28,South,Furniture,Office Sofa,620,1,160,56,Home Office
+2040,2025-06-01,West,Technology,Headset Pro,125,2,30,34,Consumer
+2041,2025-06-05,North,Office Supplies,Folder Bulk,35,15,12,41,Corporate
+2042,2025-06-09,East,Furniture,Office Shelf Large,280,1,85,49,Home Office
+2043,2025-06-13,South,Technology,Webcam HD,115,2,25,36,Consumer
+2044,2025-06-17,West,Office Supplies,Stapler Large,22,5,8,50,Corporate
+2045,2025-06-21,North,Furniture,Study Chair,190,1,48,43,Home Office
+2046,2025-06-25,East,Technology,Projector,620,1,100,52,Consumer
+2047,2025-06-29,South,Office Supplies,Desk Organizer Large,25,10,9,47,Corporate
+2048,2025-07-03,West,Furniture,Office Shelf Pro,320,1,95,55,Home Office

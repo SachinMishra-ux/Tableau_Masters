@@ -1,0 +1,1808 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='CarSales+' inline='true' name='federated.08n2toh1yp599b1coj4xd19xqwf9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CarSales' name='textscan.0hd87gs1j40sf017x09k9044204j'>
+            <connection class='textscan' directory='/Users/sachinmishra/Desktop/Euron_Tableau_Masters/data/analytics' filename='CarSales.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0hd87gs1j40sf017x09k9044204j' name='CarSales.csv' table='[CarSales#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='SaleID' ordinal='0' />
+              <column datatype='date' name='SaleDate' ordinal='1' />
+              <column datatype='string' name='CarID' ordinal='2' />
+              <column datatype='string' name='DealerID' ordinal='3' />
+              <column datatype='integer' name='SalePrice' ordinal='4' />
+              <column datatype='integer' name='Discount' ordinal='5' />
+              <column datatype='string' name='CustomerID' ordinal='6' />
+              <column datatype='string' name='Region' ordinal='7' />
+              <column datatype='integer' name='SaleQuantity' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0hd87gs1j40sf017x09k9044204j' name='CarInventory.csv' table='[CarInventory#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='CarID' ordinal='0' />
+              <column datatype='string' name='Model' ordinal='1' />
+              <column datatype='string' name='BodyStyle' ordinal='2' />
+              <column datatype='string' name='Manufacturer' ordinal='3' />
+              <column datatype='integer' name='ManufacturerYear' ordinal='4' />
+              <column datatype='string' name='EngineSize' ordinal='5' />
+              <column datatype='integer' name='OnRoadPrice' ordinal='6' />
+              <column datatype='string' name='DealerID' ordinal='7' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[BodyStyle]' value='[CarInventory.csv].[BodyStyle]' />
+          <map key='[CarID (CarInventory.csv)]' value='[CarInventory.csv].[CarID]' />
+          <map key='[CarID]' value='[CarSales.csv].[CarID]' />
+          <map key='[CustomerID]' value='[CarSales.csv].[CustomerID]' />
+          <map key='[DealerID (CarInventory.csv)]' value='[CarInventory.csv].[DealerID]' />
+          <map key='[DealerID]' value='[CarSales.csv].[DealerID]' />
+          <map key='[Discount]' value='[CarSales.csv].[Discount]' />
+          <map key='[EngineSize]' value='[CarInventory.csv].[EngineSize]' />
+          <map key='[ManufacturerYear]' value='[CarInventory.csv].[ManufacturerYear]' />
+          <map key='[Manufacturer]' value='[CarInventory.csv].[Manufacturer]' />
+          <map key='[Model]' value='[CarInventory.csv].[Model]' />
+          <map key='[OnRoadPrice]' value='[CarInventory.csv].[OnRoadPrice]' />
+          <map key='[Region]' value='[CarSales.csv].[Region]' />
+          <map key='[SaleDate]' value='[CarSales.csv].[SaleDate]' />
+          <map key='[SaleID]' value='[CarSales.csv].[SaleID]' />
+          <map key='[SalePrice]' value='[CarSales.csv].[SalePrice]' />
+          <map key='[SaleQuantity]' value='[CarSales.csv].[SaleQuantity]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SaleID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SaleID]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>SaleID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SaleDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[SaleDate]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>SaleDate</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CarID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CarID]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>CarID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DealerID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DealerID]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>DealerID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SalePrice</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SalePrice]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>SalePrice</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Discount]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>Discount</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CustomerID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CustomerID]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>CustomerID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SaleQuantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SaleQuantity]</local-name>
+            <parent-name>[CarSales.csv]</parent-name>
+            <remote-alias>SaleQuantity</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CarID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CarID (CarInventory.csv)]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>CarID</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Model</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Model]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>Model</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BodyStyle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BodyStyle]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>BodyStyle</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Manufacturer</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Manufacturer]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>Manufacturer</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ManufacturerYear</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ManufacturerYear]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>ManufacturerYear</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EngineSize</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EngineSize]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>EngineSize</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OnRoadPrice</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OnRoadPrice]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>OnRoadPrice</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DealerID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DealerID (CarInventory.csv)]</local-name>
+            <parent-name>[CarInventory.csv]</parent-name>
+            <remote-alias>DealerID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Body Style' datatype='string' name='[BodyStyle]' role='dimension' type='nominal' />
+      <column caption='First Purchase Date' datatype='date' name='[Calculation_1500261638160420864]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{ FIXED [CustomerID] : MIN([SaleDate]) }' />
+      </column>
+      <column caption='Revenue per Customer' datatype='integer' name='[Calculation_1500261638161416193]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([SalePrice])' />
+      </column>
+      <column caption='Customer Monthly Revenue' datatype='integer' name='[Calculation_1500261638161522690]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [CustomerID], DATETRUNC(&apos;month&apos;,[SaleDate]) : SUM([SalePrice]) }' />
+      </column>
+      <column caption='Customer LTV' datatype='integer' name='[Calculation_1596314974129721344]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [CustomerID] : SUM([SalePrice] - [Discount]) }' />
+      </column>
+      <column caption='Model Wise Sales Quantity' datatype='integer' name='[Calculation_1596314974136901633]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ INCLUDE [Model] : SUM([SaleQuantity]) }' />
+      </column>
+      <column aggregation='Attribute' caption='Average Price per Model' datatype='real' name='[Calculation_1596314974138957826]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ EXCLUDE [DealerID] : AVG([SalePrice]) }' />
+      </column>
+      <column aggregation='Attribute' caption='Price Difference' datatype='real' name='[Calculation_1596314974139064323]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[SalePrice] - [Calculation_1596314974138957826]' />
+      </column>
+      <column caption='Car ID' datatype='string' name='[CarID]' role='dimension' type='nominal' />
+      <column caption='Customer ID' datatype='string' name='[CustomerID]' role='dimension' type='nominal' />
+      <column caption='Dealer ID' datatype='string' name='[DealerID]' role='dimension' type='nominal' />
+      <column caption='Engine Size' datatype='string' name='[EngineSize]' role='dimension' type='nominal' />
+      <column caption='Manufacturer Year' datatype='integer' name='[ManufacturerYear]' role='dimension' type='quantitative' />
+      <column caption='On Road Price' datatype='integer' name='[OnRoadPrice]' role='measure' type='quantitative' />
+      <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+      <column caption='Sale ID' datatype='string' name='[SaleID]' role='dimension' type='nominal' />
+      <column caption='Sale Price' datatype='integer' name='[SalePrice]' role='measure' type='quantitative' />
+      <column caption='Sale Quantity' datatype='integer' name='[SaleQuantity]' role='measure' type='quantitative' />
+      <column caption='CarInventory.csv' datatype='table' name='[__tableau_internal_object_id__].[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]' role='measure' type='quantitative' />
+      <column caption='CarSales.csv' datatype='table' name='[__tableau_internal_object_id__].[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]' role='measure' type='quantitative' />
+      <column-instance column='[CustomerID]' derivation='None' name='[none:CustomerID:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/ry/0dp2gqbj4nv8q6qbdj7z67700000gn/T/tableau-temp/#TableauTemp_0b9igzn0yqtox316sphos03w4zv2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='12/01/2025 05:06:25 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='CarSales.csv_8AC04AA743E643CD9DF36137878CF885' table='[Extract].[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]' type='table' />
+            <relation name='CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3' table='[Extract].[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]' type='table' />
+          </relation>
+          <cols>
+            <map key='[BodyStyle]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[BodyStyle]' />
+            <map key='[CarID (CarInventory.csv)]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[CarID]' />
+            <map key='[CarID]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[CarID]' />
+            <map key='[CustomerID]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[CustomerID]' />
+            <map key='[DealerID (CarInventory.csv)]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[DealerID]' />
+            <map key='[DealerID]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[DealerID]' />
+            <map key='[Discount]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[Discount]' />
+            <map key='[EngineSize]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[EngineSize]' />
+            <map key='[ManufacturerYear]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[ManufacturerYear]' />
+            <map key='[Manufacturer]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[Manufacturer]' />
+            <map key='[Model]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[Model]' />
+            <map key='[OnRoadPrice]' value='[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3].[OnRoadPrice]' />
+            <map key='[Region]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[Region]' />
+            <map key='[SaleDate]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[SaleDate]' />
+            <map key='[SaleID]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[SaleID]' />
+            <map key='[SalePrice]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[SalePrice]' />
+            <map key='[SaleQuantity]' value='[CarSales.csv_8AC04AA743E643CD9DF36137878CF885].[SaleQuantity]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>SaleID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SaleID]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>SaleID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SaleDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[SaleDate]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>SaleDate</remote-alias>
+              <ordinal>1</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>222</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CarID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CarID]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>CarID</remote-alias>
+              <ordinal>2</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>122</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DealerID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DealerID]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>DealerID</remote-alias>
+              <ordinal>3</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SalePrice</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SalePrice]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>SalePrice</remote-alias>
+              <ordinal>4</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>167</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Discount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Discount]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>Discount</remote-alias>
+              <ordinal>5</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CustomerID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CustomerID]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>CustomerID</remote-alias>
+              <ordinal>6</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>7</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SaleQuantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SaleQuantity]</local-name>
+              <parent-name>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</parent-name>
+              <remote-alias>SaleQuantity</remote-alias>
+              <ordinal>8</ordinal>
+              <family>CarSales.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CarID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CarID (CarInventory.csv)]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>CarID</remote-alias>
+              <ordinal>9</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>110</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Model</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Model]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>Model</remote-alias>
+              <ordinal>10</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>110</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BodyStyle</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BodyStyle]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>BodyStyle</remote-alias>
+              <ordinal>11</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Manufacturer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Manufacturer]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>Manufacturer</remote-alias>
+              <ordinal>12</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ManufacturerYear</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ManufacturerYear]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>ManufacturerYear</remote-alias>
+              <ordinal>13</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EngineSize</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EngineSize]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>EngineSize</remote-alias>
+              <ordinal>14</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OnRoadPrice</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OnRoadPrice]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>OnRoadPrice</remote-alias>
+              <ordinal>15</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DealerID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DealerID (CarInventory.csv)]</local-name>
+              <parent-name>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</parent-name>
+              <remote-alias>DealerID</remote-alias>
+              <ordinal>16</ordinal>
+              <family>CarInventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:CustomerID:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;CUST009&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST029&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST049&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST069&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST089&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST109&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST129&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST149&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST169&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CUST189&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST001&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST021&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST041&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST061&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST081&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST101&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST121&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST141&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST161&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CUST181&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST005&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST025&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST045&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST065&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST085&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST105&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST125&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST145&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST165&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CUST185&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST013&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST033&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST053&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST073&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST093&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST113&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST133&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST153&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST173&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CUST193&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST010&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST030&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST050&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST070&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST090&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST110&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST130&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST150&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST170&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CUST190&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST006&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST026&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST046&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST066&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST086&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST106&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST126&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST146&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST166&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUST186&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST019&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST039&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST059&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST079&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST099&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST119&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST139&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST159&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST179&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CUST199&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST002&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST022&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST042&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST062&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST082&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST102&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST122&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST142&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST162&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CUST182&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST017&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST037&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST057&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST077&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST097&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST117&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST137&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST157&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST177&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CUST197&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST007&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST027&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST047&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST067&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST087&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST107&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST127&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST147&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST167&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CUST187&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST014&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST034&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST054&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST074&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST094&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST114&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST134&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST154&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST174&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUST194&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST015&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST035&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST055&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST075&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST095&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST115&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST135&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST155&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST175&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUST195&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST018&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST038&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST058&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST078&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST098&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST118&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST138&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST158&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST178&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CUST198&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST020&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST040&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST060&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST080&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST100&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST120&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST140&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST160&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST180&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CUST200&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST011&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST031&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST051&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST071&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST091&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST111&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST131&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST151&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST171&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CUST191&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST008&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST028&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST048&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST068&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST088&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST108&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST128&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST148&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST168&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CUST188&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST003&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST023&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST043&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST063&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST083&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST103&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST123&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST143&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST163&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CUST183&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST016&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST036&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST056&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST076&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST096&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST116&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST136&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST156&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST176&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CUST196&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST012&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST032&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST052&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST072&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST092&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST112&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST132&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST152&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST172&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CUST192&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST004&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST024&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST044&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST064&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST084&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST104&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST124&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST144&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST164&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUST184&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='CarID (CarInventory.csv)' />
+        <field-sort-custom-order field='Model' />
+        <field-sort-custom-order field='BodyStyle' />
+        <field-sort-custom-order field='Manufacturer' />
+        <field-sort-custom-order field='ManufacturerYear' />
+        <field-sort-custom-order field='EngineSize' />
+        <field-sort-custom-order field='OnRoadPrice' />
+        <field-sort-custom-order field='DealerID (CarInventory.csv)' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='CarInventory.csv' id='CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3'>
+            <properties context=''>
+              <relation connection='textscan.0hd87gs1j40sf017x09k9044204j' name='CarInventory.csv' table='[CarInventory#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='CarID' ordinal='0' />
+                  <column datatype='string' name='Model' ordinal='1' />
+                  <column datatype='string' name='BodyStyle' ordinal='2' />
+                  <column datatype='string' name='Manufacturer' ordinal='3' />
+                  <column datatype='integer' name='ManufacturerYear' ordinal='4' />
+                  <column datatype='string' name='EngineSize' ordinal='5' />
+                  <column datatype='integer' name='OnRoadPrice' ordinal='6' />
+                  <column datatype='string' name='DealerID' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3' table='[Extract].[CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3]' type='table' />
+            </properties>
+          </object>
+          <object caption='CarSales.csv' id='CarSales.csv_8AC04AA743E643CD9DF36137878CF885'>
+            <properties context=''>
+              <relation connection='textscan.0hd87gs1j40sf017x09k9044204j' name='CarSales.csv' table='[CarSales#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='SaleID' ordinal='0' />
+                  <column datatype='date' name='SaleDate' ordinal='1' />
+                  <column datatype='string' name='CarID' ordinal='2' />
+                  <column datatype='string' name='DealerID' ordinal='3' />
+                  <column datatype='integer' name='SalePrice' ordinal='4' />
+                  <column datatype='integer' name='Discount' ordinal='5' />
+                  <column datatype='string' name='CustomerID' ordinal='6' />
+                  <column datatype='string' name='Region' ordinal='7' />
+                  <column datatype='integer' name='SaleQuantity' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='CarSales.csv_8AC04AA743E643CD9DF36137878CF885' table='[Extract].[CarSales.csv_8AC04AA743E643CD9DF36137878CF885]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[CarID]' />
+              <expression op='[CarID (CarInventory.csv)]' />
+            </expression>
+            <first-end-point object-id='CarSales.csv_8AC04AA743E643CD9DF36137878CF885' />
+            <second-end-point object-id='CarInventory.csv_F84C9E24AFFD4D5C8F3A07F6DD6BF0A3' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Customer First Purchase'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CarSales+' name='federated.08n2toh1yp599b1coj4xd19xqwf9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08n2toh1yp599b1coj4xd19xqwf9'>
+            <column caption='First Purchase Date' datatype='date' name='[Calculation_1500261638160420864]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ FIXED [CustomerID] : MIN([SaleDate]) }' />
+            </column>
+            <column caption='Customer ID' datatype='string' name='[CustomerID]' role='dimension' type='nominal' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1500261638160420864]' derivation='Month' name='[mn:Calculation_1500261638160420864:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[CustomerID]' derivation='None' name='[none:CustomerID:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <text column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[mn:Calculation_1500261638160420864:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]</rows>
+        <cols>[federated.08n2toh1yp599b1coj4xd19xqwf9].[mn:Calculation_1500261638160420864:ok]</cols>
+      </table>
+      <simple-id uuid='{758441BC-C8F8-472A-8C31-10CB74FA643B}' />
+    </worksheet>
+    <worksheet name='Customer LTV'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CarSales+' name='federated.08n2toh1yp599b1coj4xd19xqwf9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08n2toh1yp599b1coj4xd19xqwf9'>
+            <column caption='Customer LTV' datatype='integer' name='[Calculation_1596314974129721344]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [CustomerID] : SUM([SalePrice] - [Discount]) }' />
+            </column>
+            <column caption='Customer ID' datatype='string' name='[CustomerID]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Discount]' role='measure' type='quantitative' />
+            <column caption='Sale Price' datatype='integer' name='[SalePrice]' role='measure' type='quantitative' />
+            <column-instance column='[CustomerID]' derivation='None' name='[none:CustomerID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1596314974129721344]' derivation='Sum' name='[sum:Calculation_1596314974129721344:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SalePrice]' derivation='Sum' name='[sum:SalePrice:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:Calculation_1596314974129721344:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:SalePrice:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.08n2toh1yp599b1coj4xd19xqwf9].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]</rows>
+        <cols>[federated.08n2toh1yp599b1coj4xd19xqwf9].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{7657CE06-6496-45B6-9707-4AC77285B48B}' />
+    </worksheet>
+    <worksheet name='Cutomer Monthly Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CarSales+' name='federated.08n2toh1yp599b1coj4xd19xqwf9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08n2toh1yp599b1coj4xd19xqwf9'>
+            <column caption='Customer Monthly Revenue' datatype='integer' name='[Calculation_1500261638161522690]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [CustomerID], DATETRUNC(&apos;month&apos;,[SaleDate]) : SUM([SalePrice]) }' />
+            </column>
+            <column caption='Customer ID' datatype='string' name='[CustomerID]' role='dimension' type='nominal' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column caption='Sale Price' datatype='integer' name='[SalePrice]' role='measure' type='quantitative' />
+            <column-instance column='[CustomerID]' derivation='None' name='[none:CustomerID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1500261638161522690]' derivation='Sum' name='[sum:Calculation_1500261638161522690:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SaleDate]' derivation='Month-Trunc' name='[tmn:SaleDate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST001&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST002&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST004&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST005&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST006&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST007&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST008&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST009&quot;' />
+              <groupfilter function='member' level='[none:CustomerID:nk]' member='&quot;CUST010&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:Calculation_1500261638161522690:qk]</rows>
+        <cols>[federated.08n2toh1yp599b1coj4xd19xqwf9].[tmn:SaleDate:qk]</cols>
+      </table>
+      <simple-id uuid='{D36D8DBF-236C-4070-914E-AB920C983139}' />
+    </worksheet>
+    <worksheet name='Model Wise Quantity'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CarSales+' name='federated.08n2toh1yp599b1coj4xd19xqwf9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08n2toh1yp599b1coj4xd19xqwf9'>
+            <column datatype='string' name='[Manufacturer]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Model]' role='dimension' type='nominal' />
+            <column caption='Sale Quantity' datatype='integer' name='[SaleQuantity]' role='measure' type='quantitative' />
+            <column-instance column='[Manufacturer]' derivation='None' name='[none:Manufacturer:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Model]' derivation='None' name='[none:Model:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SaleQuantity]' derivation='Sum' name='[sum:SaleQuantity:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:SaleQuantity:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.08n2toh1yp599b1coj4xd19xqwf9].[none:Model:nk] / [federated.08n2toh1yp599b1coj4xd19xqwf9].[none:Manufacturer:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{7D6647DC-4976-472D-A607-C365CA82472C}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CarSales+' name='federated.08n2toh1yp599b1coj4xd19xqwf9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08n2toh1yp599b1coj4xd19xqwf9'>
+            <column caption='Model Wise Sales Quantity' datatype='integer' name='[Calculation_1596314974136901633]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ INCLUDE [Model] : SUM([SaleQuantity]) }' />
+            </column>
+            <column datatype='string' name='[Manufacturer]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Model]' role='dimension' type='nominal' />
+            <column caption='Sale Quantity' datatype='integer' name='[SaleQuantity]' role='measure' type='quantitative' />
+            <column-instance column='[Manufacturer]' derivation='None' name='[none:Manufacturer:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1596314974136901633]' derivation='Sum' name='[sum:Calculation_1596314974136901633:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:Calculation_1596314974136901633:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:Manufacturer:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{0037F152-FC33-494C-BBBF-773A1ECB6C36}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CarSales+' name='federated.08n2toh1yp599b1coj4xd19xqwf9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08n2toh1yp599b1coj4xd19xqwf9'>
+            <column aggregation='Attribute' caption='Average Price per Model' datatype='real' name='[Calculation_1596314974138957826]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ EXCLUDE [DealerID] : AVG([SalePrice]) }' />
+            </column>
+            <column aggregation='Attribute' caption='Price Difference' datatype='real' name='[Calculation_1596314974139064323]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[SalePrice] - [Calculation_1596314974138957826]' />
+            </column>
+            <column caption='Dealer ID' datatype='string' name='[DealerID]' role='dimension' type='nominal' />
+            <column caption='Sale Price' datatype='integer' name='[SalePrice]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1596314974138957826]' derivation='Attribute' name='[attr:Calculation_1596314974138957826:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1596314974139064323]' derivation='Attribute' name='[attr:Calculation_1596314974139064323:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SalePrice]' derivation='Sum' name='[sum:SalePrice:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08n2toh1yp599b1coj4xd19xqwf9].[attr:Calculation_1596314974139064323:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.08n2toh1yp599b1coj4xd19xqwf9].[attr:Calculation_1596314974138957826:qk]</rows>
+        <cols>[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:SalePrice:qk]</cols>
+      </table>
+      <simple-id uuid='{6CC08F5E-826D-4FA2-BFE1-D11E19842992}' />
+    </worksheet>
+    <worksheet name='TOP-5 LTV Customers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CarSales+' name='federated.08n2toh1yp599b1coj4xd19xqwf9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08n2toh1yp599b1coj4xd19xqwf9'>
+            <column caption='Customer LTV' datatype='integer' name='[Calculation_1596314974129721344]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [CustomerID] : SUM([SalePrice] - [Discount]) }' />
+            </column>
+            <column caption='Customer ID' datatype='string' name='[CustomerID]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Discount]' role='measure' type='quantitative' />
+            <column caption='Sale Price' datatype='integer' name='[SalePrice]' role='measure' type='quantitative' />
+            <column-instance column='[CustomerID]' derivation='None' name='[none:CustomerID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1596314974129721344]' derivation='Sum' name='[sum:Calculation_1596314974129721344:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:Calculation_1596314974129721344:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08n2toh1yp599b1coj4xd19xqwf9].[sum:Calculation_1596314974129721344:qk]</rows>
+        <cols>[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]</cols>
+      </table>
+      <simple-id uuid='{D4B7FF06-4EC0-4416-8D4E-91930B26851A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Customer First Purchase'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4A3CBE9C-3613-4FBC-BC99-219302A37CF6}' />
+    </window>
+    <window class='worksheet' name='Cutomer Monthly Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08n2toh1yp599b1coj4xd19xqwf9].[none:CustomerID:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{752C4F8F-6AE0-44BD-B6EE-D124E9BEC94E}' />
+    </window>
+    <window class='worksheet' name='Customer LTV'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D729D7AE-5FDB-49D8-91C9-4565D5EC9BFB}' />
+    </window>
+    <window class='worksheet' name='TOP-5 LTV Customers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{83764905-7307-448A-A120-291A5E14DFFF}' />
+    </window>
+    <window class='worksheet' name='Model Wise Quantity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{58199993-E3A8-406B-A8D0-CB7C149C8FE3}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{70E45088-E3C3-4031-95D8-7735A07AD6D1}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08n2toh1yp599b1coj4xd19xqwf9].[attr:Calculation_1596314974139064323:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{249462F1-DDB1-4BD8-A2A4-DAE1753E4F1A}' />
+    </window>
+  </windows>
+</workbook>
